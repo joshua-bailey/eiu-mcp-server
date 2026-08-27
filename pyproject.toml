@@ -1,0 +1,30 @@
+[project]
+name = "eiu-mcp-server"
+version = "0.1.0"
+description = "MCP server for the EIU (Economist Intelligence Unit) data API: browse, search and fetch forecasts for ~200 countries"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+    { name = "Joshua Bailey" },
+]
+keywords = ["mcp", "eiu", "economic-data", "forecasts", "claude", "llm"]
+dependencies = [
+    "mcp>=1.0.0",
+    "requests>=2.28.0",
+]
+
+[project.scripts]
+eiu-mcp-server = "eiu_mcp.server:main"
+
+[project.urls]
+Homepage = "https://github.com/joshua-bailey/eiu-mcp-server"
+Repository = "https://github.com/joshua-bailey/eiu-mcp-server"
+Issues = "https://github.com/joshua-bailey/eiu-mcp-server/issues"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["eiu_mcp*"]
